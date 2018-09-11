@@ -5,7 +5,6 @@ require('dotenv').config({ path: './variables.env' });
 
 module.exports.create = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  console.log("-----create One-----");
   connectToDatabase()
     .then(() => {
       Note.create(JSON.parse(event.body))
@@ -23,7 +22,6 @@ module.exports.create = (event, context, callback) => {
 
 module.exports.getOne = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  console.log("-----get One-----");
   connectToDatabase()
     .then(() => {
       Note.findById(event.pathParameters.id)
@@ -41,7 +39,6 @@ module.exports.getOne = (event, context, callback) => {
 
 module.exports.getAll = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  console.log("-----get all-----");
   connectToDatabase()
     .then(() => {
       Note.find()
@@ -59,7 +56,6 @@ module.exports.getAll = (event, context, callback) => {
 
 module.exports.update = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  console.log("-----update One-----");
   connectToDatabase()
     .then(() => {
       Note.findByIdAndUpdate(event.pathParameters.id, JSON.parse(event.body), { new: true })
@@ -77,7 +73,6 @@ module.exports.update = (event, context, callback) => {
 
 module.exports.delete = (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
-  console.log("-----delete One-----");
   connectToDatabase()
     .then(() => {
       Note.findByIdAndRemove(event.pathParameters.id)
