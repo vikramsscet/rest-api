@@ -1,6 +1,5 @@
 'use strict';
 const Note = require('./note/Note');
-require('dotenv').config({ path: './variables.env' });
 
 let note = new Note();
 

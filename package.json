@@ -1,14 +1,13 @@
 {
-  "name": "rest-api",
+  "name": "serverless-rest-api-atlas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Serverless REST API with Mongo Atlas",
   "main": "handler.js",
   "scripts": {
     "test": "mocha ./tests/*",
     "run-offline": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.4",
@@ -19,8 +18,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bcryptjs-then": "^1.0.1",
-    "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.7"
-  }
+  },
+  "author": "Vikram Rao <vikram.rao@globant.com>"
 }
