@@ -5,8 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "test": "mocha ./tests/*",
-    "run-offline": "serverless offline start --skipCacheInvalidation",
-    "dev": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation"
+    "run-offline": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation"
   },
   "keywords": [],
   "author": "",
