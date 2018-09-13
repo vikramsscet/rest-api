@@ -4,21 +4,24 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/*",
+    "run-offline": "serverless offline start --skipCacheInvalidation",
+    "dev": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "serverless-offline": "^3.25.7"
+    "nodemon": "^1.18.4",
+    "serverless-offline": "^3.25.7",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bcryptjs-then": "^1.0.1",
-    "chai": "^4.1.2",
     "dotenv": "^6.0.0",
     "jsonwebtoken": "^8.3.0",
-    "mocha": "^5.2.0",
     "mongoose": "^5.2.7"
   }
 }
