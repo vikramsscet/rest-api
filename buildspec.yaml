@@ -3,6 +3,9 @@ phases:
   install:
     commands:
       - npm install
+      - npm run test
+      - rm -rf node_modules
+      - npm install --only=prod
       - mkdir .serverless & zip -r ./.serverless/rest-api.zip .
       - aws cloudformation package --template-file sam-template.yml --s3-bucket sls-globant --output-template-file packaged-template.json
 artifacts:
