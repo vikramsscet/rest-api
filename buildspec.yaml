@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install
+      - aws cloudformation package --template-file sam-template.yml --s3-bucket sls-globant --output-template-file packaged-template.json
+artifacts:
+  type: zip
+  files:
+    - sam-template.yml
+    - packaged-template.json

@@ -1,0 +1,704 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'SAM template for Serverless framework service: '
+Resources:
+  VerifyToken:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: auth/VerifyToken.auth
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+  Login:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: auth/AuthHandler.login
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /login
+            Method: post
+            RestApiId:
+              Ref: RestApi
+  RestApi:
+    Type: 'AWS::Serverless::Api'
+    Properties:
+      StageName: dev
+      DefinitionBody:
+        swagger: '2.0'
+        info:
+          title:
+            Ref: 'AWS::StackName'
+        paths:
+          /login:
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''post'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            post:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Login.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''post'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+          /register:
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''post'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            post:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Register.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''post'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+          /me:
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            get:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Me.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+          /users:
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            get:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetUsers.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+          /notes:
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''options,post,get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            post:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Create.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''post'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+            get:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetAll.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''options,post,get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+          '/notes/{id}':
+            options:
+              x-amazon-apigateway-integration:
+                type: mock
+                requestTemplates:
+                  application/json: '{ "statusCode" : 200 }'
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''options,get,put,delete'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+            get:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetOne.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''get'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+            put:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Update.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''options,get,put'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+            delete:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  'Fn::Sub': >-
+                    arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${Delete.Arn}/invocations
+                responses:
+                  default:
+                    statusCode: 200
+                    responseParameters:
+                      method.response.header.Access-Control-Allow-Headers: '''Content-Type,X-Amz-Date,Authorization,X-Api-Key'''
+                      method.response.header.Access-Control-Allow-Methods: '''options,get,put,delete'''
+                      method.response.header.Access-Control-Allow-Origin: '''*'''
+                    responseTemplates:
+                      application/json: '{}'
+              responses:
+                '200':
+                  headers:
+                    Access-Control-Allow-Headers:
+                      type: string
+                    Access-Control-Allow-Methods:
+                      type: string
+                    Access-Control-Allow-Origin:
+                      type: string
+              security:
+                - VerifyToken: []
+        securityDefinitions:
+          VerifyToken:
+            type: apiKey
+            name: VerifyToken
+            in: header
+            x-amazon-apigateway-authtype: oauth2
+            x-amazon-apigateway-authorizer:
+              type: token
+              authorizerUri:
+                'Fn::Sub': >-
+                  arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${VerifyToken.Arn}/invocations
+              identityValidationExpression: '^x-[a-z]+'
+              authorizerResultTtlInSeconds: 60
+  LoginLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Login
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Login
+      Principal: apigateway.amazonaws.com
+  Register:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: auth/AuthHandler.register
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /register
+            Method: post
+            RestApiId:
+              Ref: RestApi
+  RegisterLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Register
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Register
+      Principal: apigateway.amazonaws.com
+  Me:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: auth/AuthHandler.me
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /me
+            Method: get
+            RestApiId:
+              Ref: RestApi
+  VerifyTokenResourcePolicy:
+    Type: 'AWS::Lambda::Permission'
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        'Fn::GetAtt':
+          - VerifyToken
+          - Arn
+      Principal: apigateway.amazonaws.com
+      SourceAccount:
+        Ref: 'AWS::AccountId'
+  MeLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Me
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Me
+      Principal: apigateway.amazonaws.com
+  GetUsers:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: user/UserHandler.getUsers
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: get
+            RestApiId:
+              Ref: RestApi
+  GetUsersLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - GetUsers
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: GetUsers
+      Principal: apigateway.amazonaws.com
+  Create:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: handler.create
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: post
+            RestApiId:
+              Ref: RestApi
+  CreateLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Create
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Create
+      Principal: apigateway.amazonaws.com
+  GetOne:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: handler.getOne
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: '/notes/{id}'
+            Method: get
+            RestApiId:
+              Ref: RestApi
+  GetOneLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - GetOne
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: GetOne
+      Principal: apigateway.amazonaws.com
+  GetAll:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: handler.getAll
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: /notes
+            Method: get
+            RestApiId:
+              Ref: RestApi
+  GetAllLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - GetAll
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: GetAll
+      Principal: apigateway.amazonaws.com
+  Update:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: handler.update
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: '/notes/{id}'
+            Method: put
+            RestApiId:
+              Ref: RestApi
+  UpdateLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Update
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Update
+      Principal: apigateway.amazonaws.com
+  Delete:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: handler.delete
+      Runtime: nodejs8.10
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: reallystrongsecret
+          DB: >-
+            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      Events:
+        Event1:
+          Type: Api
+          Properties:
+            Path: '/notes/{id}'
+            Method: delete
+            RestApiId:
+              Ref: RestApi
+  DeleteLambdaPermission:
+    Type: 'AWS::Lambda::Permission'
+    DependsOn:
+      - Delete
+    Properties:
+      Action: 'lambda:InvokeFunction'
+      FunctionName:
+        Ref: Delete
+      Principal: apigateway.amazonaws.com
