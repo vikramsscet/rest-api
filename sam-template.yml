@@ -10,11 +10,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
   Login:
     Type: 'AWS::Serverless::Function'
     Properties:
@@ -23,11 +18,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -459,11 +449,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -489,11 +474,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -530,11 +510,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -560,11 +535,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -590,11 +560,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -620,11 +585,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -650,11 +610,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
@@ -680,11 +635,6 @@ Resources:
       CodeUri: ./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
-      Environment:
-        Variables:
-          JWT_SECRET: reallystrongsecret
-          DB: >-
-            mongodb://XXXUSERNAMEXXX:XXXPASSWORDXXX@cluster0-shard-00-00-XXtql.mongodb.net:27017,cluster0-shard-00-01-XXtql.mongodb.net:27017,cluster0-shard-00-02-XXtql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
       Events:
         Event1:
           Type: Api
