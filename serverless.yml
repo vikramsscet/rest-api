@@ -10,6 +10,11 @@ provider:
   timeout: 10 # the timeout is 10 seconds (default is 6 seconds)
   stage: dev # setting the env stage to dev, this will be visible in the routes
   region: us-east-1
+  deploymentBucket: sls-globant
+  package:
+    exclude:
+      - sam-template.yml
+      - packaged-template.json
   environment:
     JWT_SECRET: ${self:custom.secrets.JWT_SECRET}
     DB: ${self:custom.secrets.DB}
@@ -94,3 +99,4 @@ functions:
 
 plugins:
 - serverless-offline # adding the plugin to be able to run the offline emulation
+- serverless-sam

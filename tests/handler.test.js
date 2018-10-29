@@ -1,5 +1,5 @@
 const create = require("../handler").create;
-const connectToDatabase = require('./db');
+const connectToDatabase = require('../db');
 describe("Testing create", function(){
     it("creating note record", function(done){
 

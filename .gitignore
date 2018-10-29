@@ -4,3 +4,5 @@ jspm_packages
 package-lock.json
 # Serverless directories
 .serverless
+.vscode
+lint

@@ -4,22 +4,32 @@
   "description": "Serverless REST API with Mongo Atlas",
   "main": "handler.js",
   "scripts": {
-    "test": "mocha ./tests/*",
-    "run-offline": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation"
+    "test": "env JWT_SECRET=strongSecret mocha ./tests/*.spec.js",
+    "run-offline": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation",
+    "lint": "eslint --ext .js --ignore-pattern public/js/lib . -f ./node_modules/eslint-html-reporter/reporter.js -o lint/lint-report.html; exit 0"
   },
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.6.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-html-reporter": "^0.5.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.4",
     "serverless-offline": "^3.25.7",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "serverless-sam": "^0.1.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bcryptjs-then": "^1.0.1",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.2.7"
+    "mongoose": "^5.2.7",
+    "sinon": "^6.3.5"
   },
   "author": "Vikram Rao <vikram.rao@globant.com>"
 }

@@ -4,6 +4,7 @@ let isConnected;
 
 module.exports = connectToDatabase = () => {
   if (isConnected) {
+    //custom-console
     console.log('=> using existing database connection');
     return Promise.resolve();
   }
