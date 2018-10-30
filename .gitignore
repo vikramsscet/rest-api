@@ -3,6 +3,7 @@ node_modules
 jspm_packages
 package-lock.json
 # Serverless directories
-.serverless
+.serverless/res-api.zip
+.serverless/serverless-state.json
 .vscode
 lint
