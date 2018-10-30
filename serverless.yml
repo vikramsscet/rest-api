@@ -16,7 +16,7 @@ provider:
       - sam-template.yml
       - packaged-template.json
   environment:
-    JWT_SECRET: '{ "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}'
+    JWT_SECRET: 'gggggggggggggggggggggggg'
     DB: ${self:custom.secrets.DB}
 
 functions:
