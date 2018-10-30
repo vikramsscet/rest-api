@@ -99,4 +99,3 @@ functions:
 
 plugins:
 - serverless-offline # adding the plugin to be able to run the offline emulation
-- serverless-sam
