@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: auth/VerifyToken.auth
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -19,7 +19,7 @@ Resources:
     Properties:
       Handler: auth/AuthHandler.login
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -454,7 +454,7 @@ Resources:
     Properties:
       Handler: auth/AuthHandler.register
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -483,7 +483,7 @@ Resources:
     Properties:
       Handler: auth/AuthHandler.me
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -523,7 +523,7 @@ Resources:
     Properties:
       Handler: user/UserHandler.getUsers
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -552,7 +552,7 @@ Resources:
     Properties:
       Handler: handler.create
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -581,7 +581,7 @@ Resources:
     Properties:
       Handler: handler.getOne
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -610,7 +610,7 @@ Resources:
     Properties:
       Handler: handler.getAll
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -639,7 +639,7 @@ Resources:
     Properties:
       Handler: handler.update
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
@@ -668,7 +668,7 @@ Resources:
     Properties:
       Handler: handler.delete
       Runtime: nodejs8.10
-      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
+      CodeUri:./.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
       Environment:
