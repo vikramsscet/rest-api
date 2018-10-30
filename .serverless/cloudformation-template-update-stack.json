@@ -195,7 +195,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-verify-token",
         "Handler": "auth/VerifyToken.auth",
@@ -211,7 +211,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -220,14 +220,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "VerifyDashtokenLambdaVersiontDrmcGEE09uuWn8EgYmOeEpRhwoM84aVEGrWnOWQf0": {
+    "VerifyDashtokenLambdaVersionkaZ5E0wtfESKNDRqXi1NKa98ku3xeWzdR2cI3dYk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "VerifyDashtokenLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "LoginLambdaFunction": {
@@ -235,7 +235,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-login",
         "Handler": "auth/AuthHandler.login",
@@ -251,7 +251,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -260,14 +260,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "LoginLambdaVersionLmgnyVhpuVNapKXUVHRGMiEiMS99IKrny3B26Rztw0": {
+    "LoginLambdaVersionMdQMpd9ULwIHRpjUG257VcY144ZCLROXiQbniYfPnsA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "LoginLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "RegisterLambdaFunction": {
@@ -275,7 +275,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-register",
         "Handler": "auth/AuthHandler.register",
@@ -291,7 +291,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -300,14 +300,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "RegisterLambdaVersioncXbVYz4FfNiOXFgya5vMCrFlzBZOZ2LQz9lCnPUv2k": {
+    "RegisterLambdaVersionBXTiLOLJLTNzqDWM8JWbaUsVgIT7yzYqvXeyFI8zHQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "RegisterLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "MeLambdaFunction": {
@@ -315,7 +315,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-me",
         "Handler": "auth/AuthHandler.me",
@@ -331,7 +331,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -340,14 +340,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "MeLambdaVersionAvhfExkf7lvZYd4HS89zWH336NBfWmMZmadybOVY": {
+    "MeLambdaVersionxeoXlFtjuB5emRTDxmFa2jxuG9x1yRroDPn0XYYdfE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MeLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "GetUsersLambdaFunction": {
@@ -355,7 +355,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-getUsers",
         "Handler": "user/UserHandler.getUsers",
@@ -371,7 +371,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -380,14 +380,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetUsersLambdaVersionrtpy1raXcA9HA7JvuBwuN6nLtdiFf3HGvpv5fDrJs": {
+    "GetUsersLambdaVersionPFKTTffJgwE9vOMpNVOZVQ6G3L85GTudecTfvcPvSM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUsersLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "CreateLambdaFunction": {
@@ -395,7 +395,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-create",
         "Handler": "handler.create",
@@ -411,7 +411,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -420,14 +420,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreateLambdaVersionQQyLKrIWyqZU2bre3WLEW75pIfcIbkEH3d0rEtsdq2c": {
+    "CreateLambdaVersionShYBgBwm5othxxoUJeIkC1RRlKh56Na4xzzqp8ahY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "GetOneLambdaFunction": {
@@ -435,7 +435,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-getOne",
         "Handler": "handler.getOne",
@@ -451,7 +451,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -460,14 +460,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetOneLambdaVersionjHAc8a0Gmv83DBbN7Htwo8CCQ4Vy9AP2Wa06S3TpkVE": {
+    "GetOneLambdaVersionA6SMpvcdA3kFfyAagBJP7PTKv5RivMK3cr52J7hKV38": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOneLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "GetAllLambdaFunction": {
@@ -475,7 +475,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-getAll",
         "Handler": "handler.getAll",
@@ -491,7 +491,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -500,14 +500,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetAllLambdaVersioncBN5ro4HnPHpr31vlzY5S8Ks8VGjtdShHooX3Sk": {
+    "GetAllLambdaVersionxFMDNQQ39fA4JSNTKx6LqvDHNnU075UVebcQteT4m4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "UpdateLambdaFunction": {
@@ -515,7 +515,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-update",
         "Handler": "handler.update",
@@ -531,7 +531,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -540,14 +540,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UpdateLambdaVersionvTjjFs4B8UP7cst8pDfT5wEsiW9Kqs52VUnocsQOXc": {
+    "UpdateLambdaVersion6MHqPfk6CILlkRFPezVaN6F3BlJ6AZDxitfp6bK0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "DeleteLambdaFunction": {
@@ -555,7 +555,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/dev/1540895440329-2018-10-30T10:30:40.329Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/dev/1540896088725-2018-10-30T10:41:28.725Z/rest-api.zip"
         },
         "FunctionName": "rest-api-dev-delete",
         "Handler": "handler.delete",
@@ -571,7 +571,7 @@
         "Environment": {
           "Variables": {
             "JWT_SECRET": "gggggggggggggggggggggggg",
-            "DB": "mongodb://localhost:27017/abcd"
+            "DB": "mongodb://vikram:vikramrao1988@cluster0-shard-00-00-l7tql.mongodb.net:27017,cluster0-shard-00-01-l7tql.mongodb.net:27017,cluster0-shard-00-02-l7tql.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
           }
         }
       },
@@ -580,14 +580,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "DeleteLambdaVersionJdlCmZw9j9n8ACrBq4Y5OfjgzVYVEeFwvMxKj0BJ5E": {
+    "DeleteLambdaVersionQrDRP3jjQ2zeQagyH8VSc4RddAlFtzROCk3Vs46lydA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteLambdaFunction"
         },
-        "CodeSha256": "Oyc4VrGvNikumF9tb6YC2YkEztW7FloCqYO0/4c2OfM="
+        "CodeSha256": "a6OLFNL+Ew7T7UVHtHNLD+inMWefR7Xv/LB3Uqcpgco="
       }
     },
     "ApiGatewayRestApi": {
@@ -1419,7 +1419,7 @@
         "Type": "TOKEN"
       }
     },
-    "ApiGatewayDeployment1540895441944": {
+    "ApiGatewayDeployment1540896090165": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1893,61 +1893,61 @@
     "VerifyDashtokenLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "VerifyDashtokenLambdaVersiontDrmcGEE09uuWn8EgYmOeEpRhwoM84aVEGrWnOWQf0"
+        "Ref": "VerifyDashtokenLambdaVersionkaZ5E0wtfESKNDRqXi1NKa98ku3xeWzdR2cI3dYk"
       }
     },
     "LoginLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "LoginLambdaVersionLmgnyVhpuVNapKXUVHRGMiEiMS99IKrny3B26Rztw0"
+        "Ref": "LoginLambdaVersionMdQMpd9ULwIHRpjUG257VcY144ZCLROXiQbniYfPnsA"
       }
     },
     "RegisterLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "RegisterLambdaVersioncXbVYz4FfNiOXFgya5vMCrFlzBZOZ2LQz9lCnPUv2k"
+        "Ref": "RegisterLambdaVersionBXTiLOLJLTNzqDWM8JWbaUsVgIT7yzYqvXeyFI8zHQ"
       }
     },
     "MeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MeLambdaVersionAvhfExkf7lvZYd4HS89zWH336NBfWmMZmadybOVY"
+        "Ref": "MeLambdaVersionxeoXlFtjuB5emRTDxmFa2jxuG9x1yRroDPn0XYYdfE"
       }
     },
     "GetUsersLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUsersLambdaVersionrtpy1raXcA9HA7JvuBwuN6nLtdiFf3HGvpv5fDrJs"
+        "Ref": "GetUsersLambdaVersionPFKTTffJgwE9vOMpNVOZVQ6G3L85GTudecTfvcPvSM"
       }
     },
     "CreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateLambdaVersionQQyLKrIWyqZU2bre3WLEW75pIfcIbkEH3d0rEtsdq2c"
+        "Ref": "CreateLambdaVersionShYBgBwm5othxxoUJeIkC1RRlKh56Na4xzzqp8ahY"
       }
     },
     "GetOneLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOneLambdaVersionjHAc8a0Gmv83DBbN7Htwo8CCQ4Vy9AP2Wa06S3TpkVE"
+        "Ref": "GetOneLambdaVersionA6SMpvcdA3kFfyAagBJP7PTKv5RivMK3cr52J7hKV38"
       }
     },
     "GetAllLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllLambdaVersioncBN5ro4HnPHpr31vlzY5S8Ks8VGjtdShHooX3Sk"
+        "Ref": "GetAllLambdaVersionxFMDNQQ39fA4JSNTKx6LqvDHNnU075UVebcQteT4m4"
       }
     },
     "UpdateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateLambdaVersionvTjjFs4B8UP7cst8pDfT5wEsiW9Kqs52VUnocsQOXc"
+        "Ref": "UpdateLambdaVersion6MHqPfk6CILlkRFPezVaN6F3BlJ6AZDxitfp6bK0"
       }
     },
     "DeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteLambdaVersionJdlCmZw9j9n8ACrBq4Y5OfjgzVYVEeFwvMxKj0BJ5E"
+        "Ref": "DeleteLambdaVersionQrDRP3jjQ2zeQagyH8VSc4RddAlFtzROCk3Vs46lydA"
       }
     },
     "ServiceEndpoint": {
