@@ -7,17 +7,25 @@ Resources:
     Properties:
       Handler: auth/VerifyToken.auth
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
   Login:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: auth/AuthHandler.login
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -446,9 +454,13 @@ Resources:
     Properties:
       Handler: auth/AuthHandler.register
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -471,9 +483,13 @@ Resources:
     Properties:
       Handler: auth/AuthHandler.me
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -507,9 +523,13 @@ Resources:
     Properties:
       Handler: user/UserHandler.getUsers
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -532,9 +552,13 @@ Resources:
     Properties:
       Handler: handler.create
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -557,9 +581,13 @@ Resources:
     Properties:
       Handler: handler.getOne
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -582,9 +610,13 @@ Resources:
     Properties:
       Handler: handler.getAll
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -607,9 +639,13 @@ Resources:
     Properties:
       Handler: handler.update
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
@@ -632,9 +668,13 @@ Resources:
     Properties:
       Handler: handler.delete
       Runtime: nodejs8.10
-      CodeUri: ./.serverless/rest-api.zip
+      CodeUri: /home/rahulp/project/rest-api/.serverless/rest-api.zip
       MemorySize: 128
       Timeout: 10
+      Environment:
+        Variables:
+          JWT_SECRET: { "Fn::GetParam" : ["MyAppStage2", "testoutput.json", "JWT_SECRET"]}
+          DB: 'mongodb://localhost:27017/abcd'
       Events:
         Event1:
           Type: Api
