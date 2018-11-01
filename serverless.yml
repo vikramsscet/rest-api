@@ -15,9 +15,7 @@ provider:
     exclude:
       - sam-template.yml
       - packaged-template.json
-  environment:
-    JWT_SECRET: "{{resolve:ssm-secure:JWT_SECRET:2}}"
-    DB: "{{resolve:ssm:MONGO_ATLAS_CONNECTION:1}}"
+  environment: ${file(env.yml)}
 
 functions:
   verify-token:
