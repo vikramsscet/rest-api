@@ -16,8 +16,8 @@ provider:
       - sam-template.yml
       - packaged-template.json
   environment:
-    JWT_SECRET: 'gggggggggggggggggggggggg'
-    DB: ${self:custom.secrets.DB}
+    JWT_SECRET: "{{resolve:ssm-secure:JWT_SECRET:2}}"
+    DB: "{{resolve:ssm:MONGO_ATLAS_CONNECTION:1}}"
 
 functions:
   verify-token:
