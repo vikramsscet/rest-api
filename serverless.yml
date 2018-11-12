@@ -15,9 +15,7 @@ provider:
     exclude:
       - sam-template.yml
       - packaged-template.json
-  environment:
-    JWT_SECRET: 'gggggggggggggggggggggggg'
-    DB: ${self:custom.secrets.DB}
+  environment: ${file(env.yml)}
 
 functions:
   verify-token:
