@@ -20,7 +20,3 @@ readStream.on('data', chunk => {
 }).on('error', error => {
     console.log(error);
 });
-
-
-
-console.log()
