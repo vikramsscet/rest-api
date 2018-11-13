@@ -194,8 +194,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-verify-token",
         "Handler": "auth/VerifyToken.auth",
@@ -234,8 +234,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-login",
         "Handler": "auth/AuthHandler.login",
@@ -274,8 +274,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-register",
         "Handler": "auth/AuthHandler.register",
@@ -314,8 +314,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-me",
         "Handler": "auth/AuthHandler.me",
@@ -354,8 +354,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-getUsers",
         "Handler": "user/UserHandler.getUsers",
@@ -394,8 +394,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-create",
         "Handler": "handler.create",
@@ -434,8 +434,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-getOne",
         "Handler": "handler.getOne",
@@ -474,8 +474,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-getAll",
         "Handler": "handler.getAll",
@@ -514,8 +514,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-update",
         "Handler": "handler.update",
@@ -554,8 +554,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api-dev/dev/1542020291392-2018-11-12T10:58:11.392Z/rest-api-dev.zip"
+          "S3Bucket": "sls-globant-dev",
+          "S3Key": "serverless/rest-api-dev/dev/1542093410352-2018-11-13T07:16:50.352Z/rest-api-dev.zip"
         },
         "FunctionName": "rest-api-dev-dev-delete",
         "Handler": "handler.delete",
@@ -1419,7 +1419,7 @@
         "Type": "TOKEN"
       }
     },
-    "ApiGatewayDeployment1542020291789": {
+    "ApiGatewayDeployment1542093410727": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1894,7 +1894,7 @@
   },
   "Outputs": {
     "ServerlessDeploymentBucketName": {
-      "Value": "sls-globant"
+      "Value": "sls-globant-dev"
     },
     "VerifyDashtokenLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
