@@ -4,6 +4,7 @@
   "description": "Serverless REST API with Mongo Atlas",
   "main": "handler.js",
   "scripts": {
+    "package": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); serverless package --stage stage", 
     "test": "env JWT_SECRET=strongSecret mocha ./tests/*.spec.js",
     "run-offline": "nodemon --watch . --exec serverless offline start --skipCacheInvalidation",
     "lint": "eslint --ext .js --ignore-pattern public/js/lib . -f ./node_modules/eslint-html-reporter/reporter.js -o lint/lint-report.html; exit 0"
