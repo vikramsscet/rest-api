@@ -6,7 +6,7 @@ phases:
       - npm run test
       - rm -rf node_modules
       - npm install --only=prod
-      - zip -r ./.serverless/rest-api.zip .
+      - zip -r ./.serverless/rest-api-dev.zip .
       - node getPath.js
       - ls -al
       - cat path.txt
