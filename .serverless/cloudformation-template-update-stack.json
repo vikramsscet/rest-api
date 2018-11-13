@@ -5,61 +5,61 @@
     "VerifyDashtokenLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-verify-token"
+        "LogGroupName": "/aws/lambda/rest-api-master-verify-token"
       }
     },
     "LoginLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-login"
+        "LogGroupName": "/aws/lambda/rest-api-master-login"
       }
     },
     "RegisterLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-register"
+        "LogGroupName": "/aws/lambda/rest-api-master-register"
       }
     },
     "MeLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-me"
+        "LogGroupName": "/aws/lambda/rest-api-master-me"
       }
     },
     "GetUsersLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-getUsers"
+        "LogGroupName": "/aws/lambda/rest-api-master-getUsers"
       }
     },
     "CreateLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-create"
+        "LogGroupName": "/aws/lambda/rest-api-master-create"
       }
     },
     "GetOneLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-getOne"
+        "LogGroupName": "/aws/lambda/rest-api-master-getOne"
       }
     },
     "GetAllLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-getAll"
+        "LogGroupName": "/aws/lambda/rest-api-master-getAll"
       }
     },
     "UpdateLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-update"
+        "LogGroupName": "/aws/lambda/rest-api-master-update"
       }
     },
     "DeleteLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rest-api-stage-delete"
+        "LogGroupName": "/aws/lambda/rest-api-master-delete"
       }
     },
     "IamRoleLambdaExecution": {
@@ -87,7 +87,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "stage",
+                  "master",
                   "rest-api",
                   "lambda"
                 ]
@@ -103,34 +103,34 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-verify-token:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-verify-token:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-login:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-login:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-register:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-register:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-me:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-me:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getUsers:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getUsers:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-create:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-create:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getOne:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getOne:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getAll:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getAll:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-update:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-update:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-delete:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-delete:*"
                     }
                   ]
                 },
@@ -141,34 +141,34 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-verify-token:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-verify-token:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-login:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-login:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-register:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-register:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-me:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-me:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getUsers:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getUsers:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-create:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-create:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getOne:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getOne:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-getAll:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-getAll:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-update:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-update:*:*"
                     },
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-stage-delete:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rest-api-master-delete:*:*"
                     }
                   ]
                 }
@@ -182,7 +182,7 @@
             "-",
             [
               "rest-api",
-              "stage",
+              "master",
               "us-east-1",
               "lambdaRole"
             ]
@@ -195,9 +195,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-verify-token",
+        "FunctionName": "rest-api-master-verify-token",
         "Handler": "auth/VerifyToken.auth",
         "MemorySize": 128,
         "Role": {
@@ -220,14 +220,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "VerifyDashtokenLambdaVersionPxqyNSQpXmUxAh8RobKprBmKG9G5GpnxKVPiiCCwA": {
+    "VerifyDashtokenLambdaVersionz06UgCQPsCHJeyHbuP1vHCUyZWjG0B9FBnWusTSDA0w": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "VerifyDashtokenLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "LoginLambdaFunction": {
@@ -235,9 +235,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-login",
+        "FunctionName": "rest-api-master-login",
         "Handler": "auth/AuthHandler.login",
         "MemorySize": 128,
         "Role": {
@@ -260,14 +260,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "LoginLambdaVersiony25ujTrZ68DCExFoY9hOtMKy3xhcOfNr34NWDcFjCCs": {
+    "LoginLambdaVersionPn2TZGxjxx2cC404RolE94RbLsrPDbJWVnl1hskVE4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "LoginLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "RegisterLambdaFunction": {
@@ -275,9 +275,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-register",
+        "FunctionName": "rest-api-master-register",
         "Handler": "auth/AuthHandler.register",
         "MemorySize": 128,
         "Role": {
@@ -300,14 +300,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "RegisterLambdaVersionFQjnZQQoCw0D1sEVZK9zN8tqNdT9iY0grPxXJPKYQ": {
+    "RegisterLambdaVersionkH7zYbRa6ZQDU4H2IPQD4Ugy86RbRNLxkW9rREIlFPo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "RegisterLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "MeLambdaFunction": {
@@ -315,9 +315,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-me",
+        "FunctionName": "rest-api-master-me",
         "Handler": "auth/AuthHandler.me",
         "MemorySize": 128,
         "Role": {
@@ -340,14 +340,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "MeLambdaVersionoB0D6dKJ8mlt6066b7fHbAzKwyr1TrMAKDbLBrIao9o": {
+    "MeLambdaVersionsfd5mSJj4HgJnG94v2eay8btPRyND2VGQY2Cvbeli8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MeLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "GetUsersLambdaFunction": {
@@ -355,9 +355,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-getUsers",
+        "FunctionName": "rest-api-master-getUsers",
         "Handler": "user/UserHandler.getUsers",
         "MemorySize": 128,
         "Role": {
@@ -380,14 +380,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetUsersLambdaVersionsohWyWzakHaTpWKSTBDgpXsJwwxGPVmDmjoEJkqQ5o": {
+    "GetUsersLambdaVersionuLu8aFrASxCdmVZ83abY1n3jVoLBK0xTIGGt94yF8I": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUsersLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "CreateLambdaFunction": {
@@ -395,9 +395,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-create",
+        "FunctionName": "rest-api-master-create",
         "Handler": "handler.create",
         "MemorySize": 128,
         "Role": {
@@ -420,14 +420,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreateLambdaVersiontBiuHdV1DrmeXQKwizHoOM7zhTeSyIHQnuf6T3o17sE": {
+    "CreateLambdaVersion0kcszExItwI4K8xS9z1lRxcDSW5dJ1vwvbdGoruj9yE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "GetOneLambdaFunction": {
@@ -435,9 +435,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-getOne",
+        "FunctionName": "rest-api-master-getOne",
         "Handler": "handler.getOne",
         "MemorySize": 128,
         "Role": {
@@ -460,14 +460,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetOneLambdaVersionTyzWrYKArppaWeAlDOOMn8W4XOvYmg8vJY4JB4gYf8": {
+    "GetOneLambdaVersionFxSZqtO4VjbrXDJGmSpNR31IDyLtgQo7oqQ6vgZv0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetOneLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "GetAllLambdaFunction": {
@@ -475,9 +475,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-getAll",
+        "FunctionName": "rest-api-master-getAll",
         "Handler": "handler.getAll",
         "MemorySize": 128,
         "Role": {
@@ -500,14 +500,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GetAllLambdaVersionxCSFhXs71TIFU90OuTKKZb4hoNJ8RmclQxW6weVfNc": {
+    "GetAllLambdaVersionYEp87ba5oUorN0Vdz0oQiOkvfsChwcQuPZDmP8CfBM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "UpdateLambdaFunction": {
@@ -515,9 +515,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-update",
+        "FunctionName": "rest-api-master-update",
         "Handler": "handler.update",
         "MemorySize": 128,
         "Role": {
@@ -540,14 +540,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UpdateLambdaVersion7mmkMADrCHJ1mHxH304OwLRpkPkS3JHdOzmlVbtk": {
+    "UpdateLambdaVersion5ecNg0HvBDdns6TljRGIHaDaynULadwwc28sQi2O4U": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "DeleteLambdaFunction": {
@@ -555,9 +555,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/stage/1542111664949-2018-11-13T12:21:04.949Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
         },
-        "FunctionName": "rest-api-stage-delete",
+        "FunctionName": "rest-api-master-delete",
         "Handler": "handler.delete",
         "MemorySize": 128,
         "Role": {
@@ -580,20 +580,20 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "DeleteLambdaVersion5gGD4v6O5qtNkWfWZz6j1mMyNG5pz6sgXJM2PSodY": {
+    "DeleteLambdaVersionO8KXZGnzwbcefmRtXcDe5ktRbIbgD9L5c6QTkSdsgM4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteLambdaFunction"
         },
-        "CodeSha256": "NMBi0LKiO1iI5OiqMrnbfGWK65Hac+16tgiSUnb7BPI="
+        "CodeSha256": "jwVYy/upju8q7bX7eT06YRGIN7JnUNDo9YUbL9RN4WI="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "stage-rest-api",
+        "Name": "master-rest-api",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -1419,13 +1419,13 @@
         "Type": "TOKEN"
       }
     },
-    "ApiGatewayDeployment1542111665307": {
+    "ApiGatewayDeployment1542115169459": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "StageName": "stage"
+        "StageName": "master"
       },
       "DependsOn": [
         "ApiGatewayMethodLoginOptions",
@@ -1899,61 +1899,61 @@
     "VerifyDashtokenLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "VerifyDashtokenLambdaVersionPxqyNSQpXmUxAh8RobKprBmKG9G5GpnxKVPiiCCwA"
+        "Ref": "VerifyDashtokenLambdaVersionz06UgCQPsCHJeyHbuP1vHCUyZWjG0B9FBnWusTSDA0w"
       }
     },
     "LoginLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "LoginLambdaVersiony25ujTrZ68DCExFoY9hOtMKy3xhcOfNr34NWDcFjCCs"
+        "Ref": "LoginLambdaVersionPn2TZGxjxx2cC404RolE94RbLsrPDbJWVnl1hskVE4"
       }
     },
     "RegisterLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "RegisterLambdaVersionFQjnZQQoCw0D1sEVZK9zN8tqNdT9iY0grPxXJPKYQ"
+        "Ref": "RegisterLambdaVersionkH7zYbRa6ZQDU4H2IPQD4Ugy86RbRNLxkW9rREIlFPo"
       }
     },
     "MeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MeLambdaVersionoB0D6dKJ8mlt6066b7fHbAzKwyr1TrMAKDbLBrIao9o"
+        "Ref": "MeLambdaVersionsfd5mSJj4HgJnG94v2eay8btPRyND2VGQY2Cvbeli8"
       }
     },
     "GetUsersLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUsersLambdaVersionsohWyWzakHaTpWKSTBDgpXsJwwxGPVmDmjoEJkqQ5o"
+        "Ref": "GetUsersLambdaVersionuLu8aFrASxCdmVZ83abY1n3jVoLBK0xTIGGt94yF8I"
       }
     },
     "CreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateLambdaVersiontBiuHdV1DrmeXQKwizHoOM7zhTeSyIHQnuf6T3o17sE"
+        "Ref": "CreateLambdaVersion0kcszExItwI4K8xS9z1lRxcDSW5dJ1vwvbdGoruj9yE"
       }
     },
     "GetOneLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetOneLambdaVersionTyzWrYKArppaWeAlDOOMn8W4XOvYmg8vJY4JB4gYf8"
+        "Ref": "GetOneLambdaVersionFxSZqtO4VjbrXDJGmSpNR31IDyLtgQo7oqQ6vgZv0"
       }
     },
     "GetAllLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllLambdaVersionxCSFhXs71TIFU90OuTKKZb4hoNJ8RmclQxW6weVfNc"
+        "Ref": "GetAllLambdaVersionYEp87ba5oUorN0Vdz0oQiOkvfsChwcQuPZDmP8CfBM"
       }
     },
     "UpdateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateLambdaVersion7mmkMADrCHJ1mHxH304OwLRpkPkS3JHdOzmlVbtk"
+        "Ref": "UpdateLambdaVersion5ecNg0HvBDdns6TljRGIHaDaynULadwwc28sQi2O4U"
       }
     },
     "DeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteLambdaVersion5gGD4v6O5qtNkWfWZz6j1mMyNG5pz6sgXJM2PSodY"
+        "Ref": "DeleteLambdaVersionO8KXZGnzwbcefmRtXcDe5ktRbIbgD9L5c6QTkSdsgM4"
       }
     },
     "ServiceEndpoint": {
@@ -1970,7 +1970,7 @@
             {
               "Ref": "AWS::URLSuffix"
             },
-            "/stage"
+            "/master"
           ]
         ]
       }
