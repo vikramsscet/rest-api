@@ -195,7 +195,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-verify-token",
         "Handler": "auth/VerifyToken.auth",
@@ -235,7 +235,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-login",
         "Handler": "auth/AuthHandler.login",
@@ -275,7 +275,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-register",
         "Handler": "auth/AuthHandler.register",
@@ -315,7 +315,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-me",
         "Handler": "auth/AuthHandler.me",
@@ -355,7 +355,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-getUsers",
         "Handler": "user/UserHandler.getUsers",
@@ -395,7 +395,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-create",
         "Handler": "handler.create",
@@ -435,7 +435,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-getOne",
         "Handler": "handler.getOne",
@@ -475,7 +475,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-getAll",
         "Handler": "handler.getAll",
@@ -515,7 +515,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-update",
         "Handler": "handler.update",
@@ -555,7 +555,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "sls-globant",
-          "S3Key": "serverless/rest-api/master/1542115169041-2018-11-13T13:19:29.041Z/rest-api.zip"
+          "S3Key": "serverless/rest-api/master/1542177730922-2018-11-14T06:42:10.922Z/rest-api.zip"
         },
         "FunctionName": "rest-api-master-delete",
         "Handler": "handler.delete",
@@ -1419,7 +1419,7 @@
         "Type": "TOKEN"
       }
     },
-    "ApiGatewayDeployment1542115169459": {
+    "ApiGatewayDeployment1542177731312": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
