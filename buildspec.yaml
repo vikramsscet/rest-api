@@ -4,12 +4,10 @@ phases:
     commands:
       - npm install
       - npm run test
+      - ./node_modules/serverless/bin/serverless package --stage $stage
       - rm -rf node_modules
       - npm install --only=prod
-      - zip -r ./.serverless/rest-api.zip .
       - node getPath.js
-      - ls -al
-      - cat path.txt
       - filepath=`cat path.txt`
       - aws s3 cp .serverless s3://sls-globant/$filepath --recursive
       - aws cloudformation package --template-file ./.serverless/cloudformation-template-update-stack.json --s3-bucket sls-globant --output-template-file packaged-template.json
