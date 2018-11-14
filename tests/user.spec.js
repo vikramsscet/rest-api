@@ -31,7 +31,7 @@ describe('Test user handlers', function () {
         it('get all users', function (done) {
             UserService.getAll().then((data) => {
                 expect(data).to.equal(usersData);
-                done();
+                done('error test');
             }).catch(err => {
                 console.log(err);
                 done(err);
