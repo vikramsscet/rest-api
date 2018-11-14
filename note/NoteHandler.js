@@ -1,5 +1,5 @@
 'use strict';
-const Note = require('./note/Note');
+const Note = require('./Note');
 
 let note = new Note();
 

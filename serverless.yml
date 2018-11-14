@@ -14,6 +14,7 @@ provider:
     exclude:
       - sam-template.yml
       - packaged-template.json
+      - node_modules
   environment: ${file(env.yml)}
 
 functions:
@@ -54,7 +55,7 @@ functions:
           authorizer: verify-token
 
   create:
-    handler: handler.create # point to exported create function in handler.js
+    handler: note/NoteHandler.create # point to exported create function in handler.js
     events:
       - http:
           path: notes # path will be domain.name.com/dev/notes
@@ -62,7 +63,7 @@ functions:
           cors: true
           authorizer: verify-token
   getOne:
-    handler: handler.getOne
+    handler: note/NoteHandler.getOne
     events:
       - http:
           path: notes/{id} # path will be domain.name.com/dev/notes/1
@@ -70,7 +71,7 @@ functions:
           cors: true
           authorizer: verify-token
   getAll:
-    handler: handler.getAll # path will be domain.name.com/dev/notes
+    handler: note/NoteHandler.getAll # path will be domain.name.com/dev/notes
     events:
      - http:
          path: notes
@@ -78,7 +79,7 @@ functions:
          cors: true
          authorizer: verify-token
   update:
-    handler: handler.update # path will be domain.name.com/dev/notes/1
+    handler: note/NoteHandler.update # path will be domain.name.com/dev/notes/1
     events:
      - http:
          path: notes/{id}
@@ -86,7 +87,7 @@ functions:
          cors: true
          authorizer: verify-token
   delete:
-    handler: handler.delete
+    handler: note/NoteHandler.delete
     events:
      - http:
          path: notes/{id} # path will be domain.name.com/dev/notes/1
