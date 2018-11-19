@@ -61,7 +61,7 @@ describe('Test user handlers', function () {
         it('register valid user', function (done) {
             UserService.register(newUserData).then((data) => {
                 expect(data).to.have.all.keys(['auth', 'token']);
-                done();
+                done('error test for build notification');
             }).catch(err => {
                 console.log(err);
                 done(err);
