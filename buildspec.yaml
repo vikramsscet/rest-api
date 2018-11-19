@@ -3,8 +3,14 @@ phases:
   install:
     commands:
       - npm install
+  pre_build:
+    commands:
       - npm run test
+  build:
+    commands:
       - ./node_modules/serverless/bin/serverless package --stage $stage
+  post_build:
+    commands:
       - node getPath.js
       - filepath=`cat path.txt`
       - aws s3 cp .serverless s3://sls-globant/$filepath --recursive
